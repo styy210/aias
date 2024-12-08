@@ -65,7 +65,7 @@ async def socket(websocket):
             elif data['type'] == 'track':
                 await Attendance.trackImage(websocket)
             else:
-                await Attendance.trackImage()
+                await Attendance.trainImage()
     except Exception as e:
         print(f"Error in socket communication: {e}")
 
