@@ -88,6 +88,8 @@ class Attendance:
 
         def initDate():
             date = datetime.datetime.now().strftime('%d-%m-%Y')
+            if not os.path.exists('Data/At'):
+                os.makedirs('Data/At')
             filepath = f'Data/At/{date}.json'
             if not os.path.exists(filepath):
                 with open(filepath, 'w') as file:
